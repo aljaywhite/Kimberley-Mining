@@ -59,6 +59,8 @@ h1 {
 
 hr {
   border-top: 2px solid #fff;
+  border-left: 0px;
+  border-right: 0px;
   width: 100%;
 }
 
