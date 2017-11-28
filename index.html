@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="CSS/normalize.css">
 
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/styles.css">
 
   <link rel="stylesheet" href="CSS/fonts.css"/>
 
@@ -20,8 +20,8 @@
 </head>
 <body>
 
-<div class="grid">
-  <div class="navigation">
+
+  <nav class="navigation">
       <ul class="nav-links">
         <li id="eth-icon"><a href="#"><img class="eth-icon" src="img/eth-icon.png" alt="Etherium Icon Small Blue"></a></li>
         <li><a href="#about">about</a></li>
@@ -29,7 +29,13 @@
         <li><a href="#login">login</a></li>
         <li><a id="contact-btn" href="#contact">contact</a></li>
       </ul>
-  </div>
+      <div class="handle">
+        <p>Menu</p>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+  </nav>
+
 
   <div id="myModal" class="modal flip-in-hor-bottom" style="display: none;">
 
@@ -54,25 +60,46 @@
 </div>
 
   <div class="header">
-    <div class="header-content">
-      <h1>KIMBERLEY <span class="strong">MINING</span></h1>
+      <header>
+        <h1>KIMBERLEY <span class="strong">MINING</span></h1>
 
-        <div class="divider">
-          <hr />
-          <img src="img/eth-icon_white.png" alt="Etherium Icon Small White">
-          <hr />
-        </div>
-      <p class="slogan" id="slogan">
-        mining the <span class="strong">future</span>
-      </p>
-    </div>
-
-
-  </div>
+          <div class="divider">
+            <hr />
+            <img class="eth-icon-sm-wh" src="img/eth-icon_white.png" alt="Etherium Icon Small White">
+            <hr />
+          </div>
+        <p class="slogan" id="slogan">
+          mining the <span class="strong">future</span>
+        </p>
+      </header>
 
   <div class="eth-logo-lg">
     <img src="img/mainImage2.png" alt="Etherium Logo Large White">
   </div>
+</div>
+
+
+  <!-- <div class="about">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aperiam magnam unde nobis incidunt doloremque aliquam accusantium, nostrum et sint, facere commodi architecto eos natus, doloribus veniam cupiditate cumque dolorum.</p>
+  </div>
+
+  <div class="employees">
+    <div class="employee">
+      <h3 class="empl-name">Branden Ragains</h3>
+      <h4 class="empl-title">Founder & CEO</h4>
+      <p class="empl-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf </p>
+    </div>
+    <div class="employee">
+      <h3 class="empl-name">Branden Ragains</h3>
+      <h4 class="empl-title">Founder & CEO</h4>
+      <p class="empl-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="employee">
+      <h3 class="empl-name">Branden Ragains</h3>
+      <h4 class="empl-title">Founder & CEO</h4>
+      <p class="empl-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div> -->
 
 
   <div class="footer"></div>
@@ -89,6 +116,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
+    <script src="JS/nav.js"></script>
     <script src="JS/contactform.js"></script>
 
 </body>

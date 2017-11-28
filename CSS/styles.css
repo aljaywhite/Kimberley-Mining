@@ -12,166 +12,115 @@
     ========================================================================== */
 
 body {
+  margin: 0;
+  padding: 0 10px;
   background-size: 100vh;
   background-color: #191d4e;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
   color: #fff;
+  line-height: 1.4;
 }
 
-.about {
-  background-color: #fff;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.about p {
-  background-color: rgba(142, 143, 145, .5);
-  box-shadow: 0px 0px 0px 26px rgba(142, 143, 145, .5);
-}
-
-
-.employees {
-  background-color: #fff;
+.strong {
   color: #1A7DC2;
-  padding: 10px;
-}
-
-ul {
-  list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
-
-a:hover {
-  color: #1A7DC2;
-}
-
 
 img {
   width: 100%;
   height: auto;
 }
 
-.eth-icon {
-  width: 60%;
+.eth-icon-sm-wh, .eth-icon {
+  max-width: 40px;
   height: auto;
 }
 
-li {
-  padding: 0;
-}
-
-.eth-logo-lg {
-  display: none;
-}
-
-h1 {
-  font-weight: 500;
-  letter-spacing: 10px;
-  color: white;
-}
-
-hr {
-  border-top: 2px solid #fff;
-  border-left: 0px;
-  border-right: 0px;
-  width: 100%;
-}
-
-.strong {
-  color: #1A7DC2;
-  font-weight: bolder;
-}
-
-/* ==========================================================================
-   GRID STYLES-HOME
-   ========================================================================== */
-
-.grid {
-  display: block;
-  grid-template-columns: 5% 2fr 5%;
-  grid-template-areas:
-  ". navigation ."
-  ". header ."
-  ". eth-logo-lg ."
-  "about about about"
-  "employees employees employees"
-  ". footer . ";
-}
-
-.navigation {
-  grid-area: navigation;
-  justify-self: center;
-  /*text-align: center;*/
-  color: #fff;
-  padding-top: 5px;
-}
-
 .nav-links {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  justify-items: center;
+  display: flex;
   align-items: center;
+}
+
+nav ul {
+  overflow: hidden;
+  color: #fff;
   padding: 0;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+
+nav ul li {
+  display: inline-block;
+  float: left;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .header {
-  grid-area: header;
-  justify-self: center;
-  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  width: 60%;
+  float: left;
+  background-color: #191d4e;
+  padding: 40px 10px;
   text-align: center;
 }
 
 .divider {
-  display: grid;
-  grid-template-columns: 4fr .5fr 4fr;
-  justify-items: center;
+  display: flex;
   align-items: center;
-  text-align: center;
+}
+
+hr {
+  width: 100%;
 }
 
 .eth-logo-lg {
-  grid-area: eth-logo-lg;
-  justify-self: center;
-  text-align: center;
+  width: 30%;
+  float: right;
 }
 
 .about {
-  grid-area: about;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
+  clear: both;
 }
 
-.employees {
-  grid-area: employees;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
+.handle {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 15px 10px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
 }
 
-.employee {
-  background-color: rgba(142, 143, 145, .5);
-  border-radius: 10px;
-  align-self: stretch;
-}
-
-.empl-bio {
-  padding: 10px;
-}
-
-.empl-name, .empl-title {
+.handle p {
   margin: 0;
-  padding: 5px;
+  float: left;
 }
 
-.footer {
-  grid-area: footer;
+.handle i {
+  float: right;
 }
 
 /* ==========================================================================
@@ -378,99 +327,50 @@ form span {
                               MEDIA QUERIES
           ******************************************************/
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
 
-  .eth-logo-lg {
-    display: inline-block;
-    /*width: 70%;
-    height: auto;*/
+  nav ul {
+    max-height: 0;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 5% 6fr 2fr 5%;
-    grid-template-areas:
-    ". navigation . ."
-    ". header eth-logo-lg ."
-    "about about about about"
-    "employees employees employees employees"
-    ". footer footer . ";
-    padding: 0;
-  }
-
-  .navigation {
-    grid-area: navigation;
-    justify-self: start;
-    color: #fff;
-    padding-top: 5px;
+  .show {
+    max-height: 20em;
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    justify-items: start;
-    align-items: center;
-    padding: 0;
+    display: block;
   }
 
-  .header {
-    grid-area: header;
-    justify-self: start;
-    align-items: start;
-    text-align: center;
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
   }
 
-  h1 {
-    font-weight: 500;
-    font-size: 2em;
-    letter-spacing: 10px;
-    color: white;
+  .handle{
+    display: block;
   }
 
   .eth-logo-lg {
-    grid-area: eth-logo-lg;
-    justify-self: end;
-    text-align: center;
+    display: none;
   }
 
-  .slogan {
-    font-weight: 500;
-    font-size: 1.5em;
-    letter-spacing: 10px;
-    padding-top: 15px;
-  }
-
-  .employees {
-    grid-area: employees;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: start;
-    text-align: center;
+  .header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  clear: both;
   }
 
 }
 
 @media screen and (min-width: 900px) {
-  h1 {
-    font-weight: 500;
-    font-size: 3em;
-    letter-spacing: 10px;
-    color: white;
-  }
+
 
 }
 
 @media screen and (min-width: 1200px) {
 
-  h1 {
-    font-weight: 500;
-    font-size: 4em;
-    letter-spacing: 10px;
-    color: white;
-  }
+
 
 }
