@@ -15,11 +15,19 @@ body {
   margin: 0;
   padding: 0 10px;
   background-size: 100vh;
-  background-color: #191d4e;
+  background-color: #fff;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
-  color: #fff;
+  color: #191d4e;
   line-height: 1.4;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.slogan {
+  font-size: 2em;
 }
 
 .strong {
@@ -63,7 +71,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   float: left;
-  color: #fff;
+  color: #191d4e;
   padding: 20px;
 }
 
@@ -79,7 +87,7 @@ nav ul li:hover {
 header {
   width: 60%;
   float: left;
-  background-color: #191d4e;
+  background-color: #fff;
   padding: 40px 10px;
   text-align: center;
 }
@@ -96,6 +104,7 @@ hr {
 .eth-logo-lg {
   width: 30%;
   float: right;
+  padding-left: 3em;
 }
 
 .about {
@@ -110,7 +119,7 @@ hr {
   text-align: left;
   padding: 15px 10px;
   cursor: pointer;
-  color: #fff;
+  color: #191d4e;
   display: none;
 }
 
@@ -362,10 +371,58 @@ form span {
   clear: both;
   }
 
+  h1 {
+    font-size: 2em;
+  }
+
+  .slogan {
+    font-size: 1em;
+  }
+
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
 
+  nav ul {
+    max-height: 0;
+  }
+
+  .show {
+    max-height: 20em;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .handle{
+    display: block;
+  }
+
+  .eth-logo-lg {
+    display: none;
+  }
+
+  .header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  clear: both;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .slogan {
+    font-size: 1em;
+  }
 
 }
 
